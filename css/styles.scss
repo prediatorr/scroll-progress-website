@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	user-select: none;
+}
+
+body {
+	height: 100vh;
+	position: relative;
+}
+
+.scroll-view {
+	.scroll {
+		height: 100vh;
+	}
+}
+
+section {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: white;
+	// box-shadow: 0 0 50px rgba(220, 220, 220, 0.35);
+}
+
+#home {
+	background: rgb(3, 5, 23);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+
+	h1 {
+		font-size: 340px;
+		font-weight: bolder;
+		text-transform: uppercase;
+		text-shadow: 0 0 50px rgb(189, 179, 243);
+		font-family: "DELIRIUM NCV", "POPPINS", sans-serif;
+	}
+}
+
+#about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 100%;
+
+	.d-flex {
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+		padding: 5em;
+
+		&:nth-of-type(2) {
+			flex: 1;
+		}
+
+		h1 {
+			font-size: 84px;
+			font-weight: 500;
+
+			strong {
+				text-transform: uppercase;
+				font-weight: bolder;
+			}
+		}
+
+		h2 {
+			font-size: 56px;
+			text-transform: uppercase;
+			font-weight: normal;
+		}
+
+		h3 {
+			font-size: 32px;
+			color: grey;
+			font-weight: normal;
+		}
+
+		img {
+			height: 800px;
+			width: 600px;
+			object-fit: cover;
+			opacity: 1;
+			box-shadow: 0 0 50px grey;
+			aspect-ratio: 3 / 4;
+		}
+	}
+}
+
+#projects {
+	top: 200%;
+
+	.cards {
+		position: absolute;
+		height: 100%;
+		width: max-content;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.card {
+		position: relative;
+		transform: scale(0.75);
+		margin: 0 7.5em;
+		height: 800px;
+		width: 600px;
+		$font-size: 300px;
+		white-space: break-word;
+		text-align: center;
+		box-shadow: 0 0 50px rgb(220, 220, 220);
+		aspect-ratio: 3 / 4;
+
+		.card-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: $font-size;
+			font-weight: bolder;
+			z-index: -1;
+			font-family: "DELIRIUM NCV", "POPPINS", sans-serif;
+		}
+
+		.card-image {
+			clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+			aspect-ratio: 3 / 4;
+
+			img {
+				filter: brightness(75%);
+				aspect-ratio: 3 / 4;
+			}
+
+			.title {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				font-size: $font-size;
+				font-weight: bolder;
+				transform: translate(-50%, -50%);
+				color: white;
+				font-family: "DELIRIUM NCV", "POPPINS", sans-serif;
+			}
+		}
+	}
+}
+
+#contact {
+	top: 300%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	.form-about,
+	.form {
+		flex: 1;
+		padding: 5em;
+
+		.flex-d {
+			h1 {
+				font-size: 156px;
+				font-weight: bolder;
+
+				font-family: "DELIRIUM NCV", "POPPINS", sans-serif;
+			}
+
+			h4 {
+				font-size: 20px;
+				font-weight: normal;
+				padding: 1em;
+			}
+		}
+
+		.form-input {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			width: 100%;
+			margin: 1em 0;
+
+			label {
+				color: grey;
+				padding: 0.25em 0;
+				font-size: 20px;
+			}
+
+			input,
+			textarea {
+				width: 100%;
+				font-size: 20px;
+				resize: none;
+				border: none;
+				box-shadow: 0 0 10px rgb(220, 220, 220);
+				padding: 0.25em 0.5em;
+				outline: none;
+				border-radius: 2px;
+
+				&:focus {
+					outline: 1px solid rgb(220, 220, 220);
+				}
+			}
+		}
+
+		button {
+			background: white;
+			border: none;
+			border-radius: 2px;
+			padding: 0.25em 0.5em;
+			font-size: 20px;
+			color: grey;
+			transition-duration: 200ms;
+			box-shadow: 0 0 10px rgb(220, 220, 220);
+			cursor: pointer;
+
+			&:hover {
+				color: black;
+				box-shadow: 0 0 25px rgb(220, 220, 220);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	#about {
+		.d-flex {
+			h2 {
+				font-size: 32px;
+			}
+
+			h1 {
+				font-size: 56px;
+			}
+		}
+	}
+
+	#contact {
+		display: block;
+
+		.form-about,
+		.form {
+			padding: 0.5em 2em;
+
+			h1 {
+				font-size: 84px !important;
+				padding: 1em 0 0 0;
+			}
+
+			h4 {
+				font-size: 20px !important;
+
+				&:nth-last-of-type(2) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#home {
+		h1 {
+			font-size: 156px;
+		}
+	}
+
+	#about {
+		display: block;
+
+		.d-flex {
+			flex: none !important;
+			padding: 3em;
+
+			h2 {
+				font-size: 32px;
+			}
+
+			h1 {
+				font-size: 56px;
+			}
+
+			img {
+				height: auto;
+				width: 75vw;
+			}
+		}
+	}
+
+	#projects {
+		.card {
+			width: auto;
+			height: 75vh;
+
+			.card-image img {
+				width: auto;
+				height: 75vh;
+			}
+
+			.card-title,
+			.title {
+				font-size: 82px !important;
+			}
+		}
+	}
+
+	#contact {
+		.form-about,
+		.form {
+			h1 {
+				font-size: 84px !important;
+			}
+
+			h4 {
+				font-size: 14px !important;
+
+				&:nth-last-of-type(2) {
+					display: none;
+				}
+			}
+		}
+	}
+}
