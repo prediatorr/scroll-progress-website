@@ -85,6 +85,10 @@ timeline.from("#contact .form button", {
 	opacity: 0,
 	duration: 0.25,
 });
+timeline.to("#contact", {
+	top: "-25%",
+	duration: 0.5,
+});
 
 window.addEventListener("scroll", () => {
 	percent =
