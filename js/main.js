@@ -1,15 +1,19 @@
 const timeline = gsap.timeline();
 timeline.pause();
 
-timeline.from("#home h1", {
+timeline.to("#home h1,h3", {
 	opacity: 0,
 	duration: 0.25,
 });
 
-timeline.to("#about", {
-	top: "0%",
-	duration: 0.25,
-});
+timeline.to(
+	"#about",
+	{
+		top: "0%",
+		duration: 0.25,
+	},
+	0.15
+);
 
 timeline.from("#about h1,#about h2,#about h3", {
 	translateX: "-125%",

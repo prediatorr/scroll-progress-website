@@ -35,6 +35,7 @@ section {
   align-items: center;
   text-align: center;
   color: white;
+  flex-direction: column;
 }
 #home h1 {
   font-size: 340px;
@@ -42,6 +43,11 @@ section {
   text-transform: uppercase;
   text-shadow: 0 0 50px rgb(189, 179, 243);
   font-family: "DELIRIUM NCV", "POPPINS", sans-serif;
+}
+#home h3 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 #about {
