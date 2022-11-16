@@ -1,7 +1,7 @@
 const timeline = gsap.timeline();
 timeline.pause();
 
-timeline.to("#home h1,h3", {
+timeline.to("#home h1, #home h3", {
 	opacity: 0,
 	duration: 0.25,
 });
